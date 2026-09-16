@@ -29,7 +29,7 @@ export async function processAudio(
         .input(mainAudioPath)
         .input(endBaitPath)
         .on('start', (cmd) => {
-          logger.info({ jobId }, `FFmpeg started: ${cmd}`);
+          logger.info({ jobId }, 'FFmpeg started');
         })
         .on('progress', (progress) => {
           logger.debug({ jobId, progress }, 'FFmpeg progress');
