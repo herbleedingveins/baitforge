@@ -1,0 +1,10 @@
+vitest:
+  globals: true
+  environment: node
+  include:
+    - src/__tests__/**/*.test.ts
+  coverage:
+    provider: v8
+    reporter:
+      - text
+      - html
