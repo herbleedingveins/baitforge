@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  baitforge:
+    build: .
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - APPLICATION_ID=${APPLICATION_ID}
+      - OWNER_USER_ID=${OWNER_USER_ID}
+      - ALLOWED_CHANNEL_ID=${ALLOWED_CHANNEL_ID}
+      - NODE_ENV=production
+    volumes:
+      - ./storage:/app/storage
+      - ./baitforge.db:/app/baitforge.db
+    restart: unless-stopped
